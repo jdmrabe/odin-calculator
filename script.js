@@ -5,6 +5,7 @@ const buttons = {};
 let current = 0;
 let buffer = 0;
 let setMode = "rest";
+let hasDecimal = 0;
 
 // Loop through all the numbers to get button element based on ID
 for (let i = 0; i <= 9; i++) {
@@ -24,7 +25,9 @@ operators.forEach((id) => {
   const button = document
     .getElementById(id)
     .addEventListener("click", (event) => {
+      if (setMode != "rest") performOperation();
       setMode = event.target.id;
+      hasDecimal = 0;
     });
   buttons[id] = button;
 });
@@ -32,6 +35,7 @@ operators.forEach((id) => {
 const ac = document.getElementById("ac").addEventListener("click", () => {
   current = 0;
   setMode = "rest";
+  hasDecimal = 0;
   output.innerText = current;
 });
 
@@ -39,18 +43,34 @@ const equals = document
   .getElementById("equals")
   .addEventListener("click", performOperation);
 
+const dot = document.getElementById("dot").addEventListener("click", () => {
+  if (hasDecimal > 0) return;
+  if (setMode === "rest") output.innerText = current + ".";
+  else if (setMode != "rest") output.innerText = buffer + ".";
+  hasDecimal++;
+});
+
 function calculate(n) {
   if (setMode === "rest") {
-    if (current == 0) {
+    if (current === 0) {
       current = n;
+      output.innerText = current;
+    } else if (hasDecimal > 0) {
+      current += n / 10 ** hasDecimal;
+      hasDecimal++;
       output.innerText = current;
     } else {
       current = current * 10 + n;
       output.innerText = current;
     }
   } else {
+    // Handles 2nd number
     if (buffer == 0) {
       buffer = n;
+      output.innerText = buffer;
+    } else if (hasDecimal > 0) {
+      buffer += n / 10 ** hasDecimal;
+      hasDecimal++;
       output.innerText = buffer;
     } else {
       buffer = buffer * 10 + n;
