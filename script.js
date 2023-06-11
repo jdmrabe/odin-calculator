@@ -71,5 +71,6 @@ function performOperation() {
   }
   buffer = 0;
   setMode = "rest";
+  current = Math.round((current + Number.EPSILON) * 1e10) / 1e10;
   output.innerText = current;
 }

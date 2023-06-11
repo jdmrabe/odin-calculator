@@ -24,6 +24,7 @@
   align-items: center;
   gap: 20px;
   width: 310px;
+  overflow: hidden;
 }
 
 .row-1,
@@ -77,14 +78,6 @@ button {
   height: 3.5rem;
   border-radius: 25%;
   justify-self: flex-end;
-}
-
-[id="0"] {
-  width: 7.5rem;
-  height: 3.5rem;
-  border-radius: 1.75rem;
-  padding-left: 1.5rem;
-  text-align: left;
 }
 
 #output {
