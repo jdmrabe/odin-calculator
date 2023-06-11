@@ -6,8 +6,6 @@ Made during the Foundations Course of The Odin Project (TOP), this project aims 
 
 The activity's details can be found [here](https://www.theodinproject.com/lessons/foundations-calculator).
 
-Emoji used for the moves are from [Twemogi](https://twemoji.twitter.com/).
-
 ## Technologies Used
 
 - HTML
@@ -16,7 +14,7 @@ Emoji used for the moves are from [Twemogi](https://twemoji.twitter.com/).
 
 ## Preview
 
-Live preview can be accessed [here](https://jdmrabe.github.io/odin-rps/).
+Live preview can be accessed [here](https://jdmrabe.github.io/odin-calculator/).
 
 ## License
 
