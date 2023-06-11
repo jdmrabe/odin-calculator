@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap");
+
+* {
+  background-color: #121212;
+  color: #fff;
+  font-size: 1.25rem;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 50px;
+  gap: 10px;
+}
+
+.display {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px;
+  width: 310px;
+}
+
+.row-1,
+.row-2,
+.row-3,
+.row-4 {
+  display: flex;
+  gap: 10px;
+}
+
+button {
+  color: inherit;
+  border: none;
+  cursor: pointer;
+  margin: 0;
+  transition: 200ms ease-in;
+}
+
+.gray,
+.orange,
+.light-gray {
+  border-radius: 50%;
+  width: 3.5rem;
+  height: 3.5rem;
+}
+
+.gray {
+  background-color: #1c1c1c;
+}
+.gray:hover {
+  background-color: #505050;
+}
+
+.light-gray {
+  background-color: #505050;
+  color: #121212;
+}
+.light-gray:hover {
+  background-color: #d4d4d2;
+}
+
+.orange {
+  background-color: hsl(35, 100%, 50%);
+}
+.orange:hover {
+  background-color: hsl(35, 100%, 30%);
+}
+
+#ac {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 25%;
+  justify-self: flex-end;
+}
+
+[id="0"] {
+  width: 7.5rem;
+  height: 3.5rem;
+  border-radius: 1.75rem;
+  padding-left: 1.5rem;
+  text-align: left;
+}
+
+#output {
+  width: 230px;
+  height: 3.5rem;
+  border: 2px #1c1c1c solid;
+  border-radius: 0.5rem;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 0.75rem;
+
+  text-align: right;
+}
